@@ -10,6 +10,7 @@ a:focus {
 
 a:hover {
   color: #e9938a;
+  text-decoration: none;
 }
 
 /* Custom default button */
@@ -41,6 +42,12 @@ a:hover {
   border: 1px solid #ec685b;
   border-radius: 0px;
   box-shadow: 0 2px 4px rgba(47,57,73,.5);
+}
+
+/* Icon Classes */
+.icon {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 
 /*
@@ -79,6 +86,9 @@ p {
   -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.5);
       box-shadow: inset 0 0 10px rgba(0,0,0,.5);
   background-image: url(../images/hero/camelback-mtn.png);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
 }
 
 .hero-grad {
@@ -101,10 +111,27 @@ p {
 /*
  * Header
  */
+.masthead {
+  padding: 15px;
+}
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #f6f6f6;
+}
+
+.masthead-brand > a {
+  color: #f6f6f6;
+}
+
+.masthead-brand > a:hover {
+  color: #ec685b;
+  text-decoration: none;
+}
+
+.masthead-nav {
+	height: 33px;
 }
 
 .masthead-nav > li {
@@ -147,13 +174,14 @@ p {
 /* Bio Content */
 .bio {
   background-image: url(../images/aboutMe/about-me-bkgrd.png);
-  width: 100%;
-  height: 100%;
-  max-height: 400px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
   padding: 40px 0px;
   vertical-align: middle;
 }
 
+/* Light Background text */
 .header-light {
   color: #374440;
   font-size: 36px;
@@ -170,62 +198,171 @@ p {
   text-shadow: none;
 }
 
+/* Dark Background text */
+.header-dark {
+  color: #f6f6f6;
+  font-size: 36px;
+  text-align: left;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.subheader-dark {
+  color: #f6f6f6;
+  font-size: 22px;
+  text-align: left;
+  font-weight: 400;
+  text-shadow: none;
+}
+
 .middle {
-	vertical-align: middle;
+  vertical-align: middle;
+}
+
+/* Navbar transition */
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
+  box-shadow: 0 4px 8px rgba(47,57,73,.5);
+}
+
+.affix a {
+  color: #374440 !important;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-shadow: none;
+}
+
+.affix > .masthead-brand > a:hover {
+  color: #ec685b;
+  text-decoration: none;
+}
+
+.affix > .masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #374440; /* IE8 proofing */
+  color: rgba(55,68,64,1);
+  border-bottom: 2px solid transparent;
+}
+.affix > .masthead-nav > li > a:hover,
+.affix > .masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(55,68,64,.5);
+}
+.affix > .nav .masthead-nav > .active > a,
+.affix > .nav .masthead-nav > .active > a:hover,
+.affix > .nav .masthead-nav > .active > a:focus {
+  color: #374440;
+  border-bottom-color: #374440;
+}
+
+.affix .btn-custom {
+  color: #374440;
+  text-shadow: none;
+  background-color: transparent;
+  border: 1px solid #374440;
+  border-radius: 0px;
+  font-size: 16px;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.affix .btn-custom:hover {
+  color: #f6f6f6;
+  text-shadow: none;
+  background-color: #ec685b;
+  background-color: rgba(236,104,91,1);
+  border: 1px solid #ec685b;
+  border-radius: 0px;
+  box-shadow: 0 2px 4px rgba(47,57,73,.5);
+}
+
+.affix + .container-fluid {
+  padding-top: 15px;
+}
+
+/* When at the top of the page */
+.affix-top a {
+  text-shadow: 0 2px 4px rgba(47,57,73,.5);
+}
+
+.affix-top > .masthead-brand > a:hover {
+  color: #ec685b;
+  text-decoration: none;
+}
+
+.affix-top > .masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #f6f6f6; /* IE8 proofing */
+  color: rgba(246,246,246,1);
+  border-bottom: 2px solid transparent;
+}
+.affix-top > .masthead-nav > li > a:hover,
+.affix-top > .masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.affix-top > .masthead-nav > .active > a,
+.affix-top > .masthead-nav > .active > a:hover,
+.affix-top > .masthead-nav > .active > a:focus {
+  color: #f6f6f6;
+  border-bottom-color: #f6f6f6;
 }
 
 /* Accordion */
-button.accordion {
+.custom {
+  color: #f6f6f6;
   background-color: #08656e;
-  color: #f6f6f6;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
   border: none;
-  outline: none;
-  transition: 0.4s;
-	margin-bottom: 15px;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-button.accordion.active {
-  background-color: #ec685b;
-  background-color: rgba(236,104,91,1);
-  margin-bottom: 0px;
-}
-
-button.accordion:hover {
-  background-color: #ec685b;
-  background-color: rgba(236,104,91,1);
-}
-
-.content-panel {
   padding: 15px;
-  background-color: #f6f6f6;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  /*display: none;*/
-  /*min-height: 99px;*/
-  margin-bottom: 15px;
 }
 
-button.accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
+.custom:hover {
   color: #f6f6f6;
-  float: right;
-  margin-left: 5px;
+  background-color: #ec685b;
+  border: none;
+  padding: 15px;
 }
 
-button.accordion.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+.custom:focus {
+  color: #f6f6f6;
+  background-color: #ec685b;
+  border: none;
+  padding: 15px;
 }
 
-button {
-  font-weight: 500;
-  font-size: 22px;
+.custom:focus > a {
+  color: #f6f6f6;
+  text-decoration: none;
+}
+
+.panel-heading:hover {
+  color: #f6f6f6;
+  background-color: #08656e;
+  border: none;
+}
+
+/* Dark Background Section */
+.dark {
+  background-color: #08656e;
+  background-repeat:no-repeat;
+  background-position:center;
+  padding: 60px 45px;
+  margin: 0px -60px;
+  box-shadow: 0px 5px 12px rgba(47,57,73,.5), 0px -5px 12px rgba(47,57,73,.5);
 }
 
 /*
@@ -278,7 +415,6 @@ button {
 }
 
 @media (min-width: 992px) {
-  .masthead,
   .mastfoot,
   .cover-container {
     width: 970px;
@@ -286,7 +422,6 @@ button {
 }
 
 @media (min-width: 1200px) {
-  .masthead,
   .mastfoot,
   .cover-container {
     width: 1170px;
