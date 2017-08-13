@@ -62,9 +62,10 @@ body {
 body {
   color: #374440;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
 }
 
-p {
+p, li {
 	color: #374440;
 	font-size: 16px;
 	font-weight: 400;
@@ -107,12 +108,13 @@ p {
 	color: #08656e;
 	text-align: left;
 	text-shadow: 0 2px 4px rgba(47,57,73,.5);
+	font-family: 'Limelight', cursive;
 }
 /*
  * Header
  */
 .masthead {
-  padding: 15px;
+  padding: 30px 60px;
 }
 
 .masthead-brand {
@@ -172,13 +174,20 @@ p {
 }
 
 /* Bio Content */
-.bio {
-  background-image: url(../images/aboutMe/about-me-bkgrd.png);
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
-  padding: 40px 0px;
-  vertical-align: middle;
+.bio-left {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: left;
+  max-height: 320px;
+}
+
+.bio-right {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: right;
+  max-height: 280px;
 }
 
 /* Light Background text */
@@ -241,7 +250,6 @@ p {
 
 .affix > .masthead-brand > a:hover {
   color: #ec685b;
-  text-decoration: none;
 }
 
 .affix > .masthead-nav > li > a {
@@ -256,11 +264,6 @@ p {
 .affix > .masthead-nav > li > a:hover,
 .affix > .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: rgba(55,68,64,.5);
-}
-.affix > .nav .masthead-nav > .active > a,
-.affix > .nav .masthead-nav > .active > a:hover,
-.affix > .nav .masthead-nav > .active > a:focus {
   color: #374440;
   border-bottom-color: #374440;
 }
@@ -360,7 +363,7 @@ p {
   background-color: #08656e;
   background-repeat:no-repeat;
   background-position:center;
-  padding: 60px 45px;
+  padding: 60px 59px;
   margin: 0px -60px;
   box-shadow: 0px 5px 12px rgba(47,57,73,.5), 0px -5px 12px rgba(47,57,73,.5);
 }
@@ -396,6 +399,7 @@ p {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
+	left: 0;
     top: 0;
   }
   .mastfoot {
@@ -412,6 +416,10 @@ p {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+	
+  .row {
+	padding: 0px 30px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -419,11 +427,19 @@ p {
   .cover-container {
     width: 970px;
   }
+  .row {
+	padding: 0px 30px;
+  }
+	
 }
 
 @media (min-width: 1200px) {
   .mastfoot,
   .cover-container {
     width: 1170px;
+  }
+	
+  .row {
+	padding: 0px 30px;
   }
 }

@@ -55,6 +55,7 @@ body {
 body {
   color: #f6f6f6;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 0 2px 4px rgba(47,57,73,.5);
 }
 
@@ -150,6 +151,7 @@ body {
 .cover-heading {
 	color: #08656e;
 	font-size: 72px;
+	font-family: 'Limelight', cursive;
 }
 
 /*
